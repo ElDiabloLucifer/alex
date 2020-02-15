@@ -1593,7 +1593,7 @@ fun_conexao () {
 while true $x != "ok"
 do
 clear
-echo -e "\E[44;1;37m                MODO DE CONEXAO                 \E[0m\n"
+echo -e "\E[44;1;37m                MODO DE CONECCION                 \E[0m\n"
 echo -e "\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config|cut -d' ' -f2 |grep -v 'no' |xargs)" && sts6="\033[1;32m◉ "
 
 [[ "$(netstat -nltp|grep 'sslh' |wc -l)" != '0' ]] && {
@@ -1643,13 +1643,13 @@ echo -e "\033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mOPENSSH $sts
 [\033[1;36m05\033[1;31m] \033[1;37m• \033[1;33mPROXY SOCKS $sts4\033[1;31m
 [\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mSSL TUNNEL $sts3\033[1;31m
 [\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mSSLH MULTIPLEX $sts7\033[1;31m
-[\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mVOLTAR \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
-[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSAIR \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+[\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mVOLVER \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
+[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSALIR \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 echo ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 tput civis
-echo -ne "\033[1;32mOQUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m "; read x
+echo -ne "\033[1;32mQUE DESEA HAZER \033[1;33m?\033[1;31m?\033[1;37m "; read x
 tput cnorm
 clear
 case $x in
